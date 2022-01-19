@@ -1,0 +1,13 @@
+<h1> My tasks </h1>
+
+<ul> <% @tasks.each do |tarea| %>
+  <li> <% tarea.title %> Al hacer click pasale este numero al show <%= tarea.id %>
+  <%= link_to tarea.title, task_path(tarea.id) %> al hacer click en el titulo(tarea.title) busque en el archivo routers si existe una linea que haga referencia a show  </li> 
+  <% end %>
+</ul>
+
+<%= link_to new_task_path do %>
+<div> New Task </div>
+<% end %>
+
+ <!--  link_to = vaya a / dirigirse a------ task_path = la ruta definida en routes.rb   -- !>
