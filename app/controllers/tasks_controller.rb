@@ -6,7 +6,7 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
   end
-  # s
+
   def new
     @task = Task.new
   end
@@ -33,11 +33,9 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end 
 
-
   private
 
   def task_params
     params.require(:task).permit(:title, :details, :completed)
   end
-
 end

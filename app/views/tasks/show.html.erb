@@ -1,7 +1,12 @@
-<%= @task.title %>
-<%= @task.details %>
-<%= @task.completed %>
+<div class="container">
+  <div class="small-container">
+    <h2> <%= @task.title %> </h2>
+    <p> <%= @task.details %> </p>
+    <p> <%= @task.completed %> </p>
+  </div>
 
-<%= link_to edit_task_path do %>
-<div> Edit </div>
-<% end %>
+  <%= link_to edit_task_path, class: "bottom" do %>
+    Edit
+  <% end %>
+  
+</div>
